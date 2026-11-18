@@ -1,0 +1,56 @@
+# Shoujo Light — slate-ink linework on frosted paper,
+# drawn from the light 少女装甲战士 wallpaper
+mode = "light"
+
+accent = "#4c5a73"
+selection = "#c9ced8"
+muted = "#9fa3a9"
+
+background = "#e5e9f0"
+dark_background = "#dce1e9"
+darker_background = "#d2d7e0"
+lighter_background = "#eef1f5"
+
+foreground = "#2e3440"
+dark_foreground = "#7a7e85"
+light_foreground = "#3b4250"
+bright_foreground = "#1f242d"
+
+red = "#a3434f"
+yellow = "#8a6a2a"
+orange = "#a35a3c"
+green = "#4f7350"
+cyan = "#3f7580"
+blue = "#4a6491"
+magenta = "#85587d"
+brown = "#6b5550"
+
+bright_red = "#b8575f"
+bright_yellow = "#9e7c38"
+bright_green = "#5f8560"
+bright_cyan = "#4f8794"
+bright_blue = "#5b76a3"
+bright_magenta = "#986b90"
+
+# Legacy keys for Omarchy 3.x, whose templates only read these names.
+# Omarchy 4.x derives the same values from the palette above.
+cursor = "#1f242d"
+selection_foreground = "#1f242d"
+selection_background = "#c9ced8"
+
+color0 = "#e5e9f0"
+color1 = "#a3434f"
+color2 = "#4f7350"
+color3 = "#8a6a2a"
+color4 = "#4a6491"
+color5 = "#85587d"
+color6 = "#3f7580"
+color7 = "#2e3440"
+color8 = "#9fa3a9"
+color9 = "#b8575f"
+color10 = "#5f8560"
+color11 = "#9e7c38"
+color12 = "#5b76a3"
+color13 = "#986b90"
+color14 = "#4f8794"
+color15 = "#1f242d"
