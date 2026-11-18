@@ -10,7 +10,34 @@ Looking for the nighttime version? See [Shoujo Dark](https://github.com/GermanVi
 
 ## Installation
 
-Pick one:
+### Full setup (recommended)
+
+Installs the theme and makes your prompt, `fastfetch`, `ls`/`eza`, terminals and Neovim match it, like the screenshot:
+
+```
+bash <(curl -fsSL https://raw.githubusercontent.com/GermanViter/omarchy-shoujo-light-theme/main/install.sh)
+```
+
+Needs Omarchy 4. Add `--both` to also get Shoujo Dark, `--dry-run` to preview the changes, or `--uninstall` to undo them.
+
+What it sets up:
+
+| Tool | Change |
+| --- | --- |
+| **Starship** | The Shoujo powerline prompt. `~/.config/starship.toml` becomes a link to a copy Omarchy recolors on every theme switch |
+| **Fastfetch** | Omarchy's layout with the logo in the theme's accent color (`~/.config/fastfetch/config.jsonc`) |
+| **eza** (`ls`, `lt`) | Theme colors for file types, permissions, sizes and git status (`~/.config/eza/theme.yml`), plus one line in `~/.bashrc` and `~/.zshrc`, because eza ignores its theme while `LS_COLORS` is set |
+| **Kitty** | 90% opacity, blur, cursor trail and a 10px margin, added at the top of `kitty.conf` so your own settings still win (`--no-terminal-look` skips it) |
+| **Terminals** | Checks that Alacritty, Kitty, Ghostty and Foot still read Omarchy's theme colors |
+| **Neovim** | Links LazyVim to the current Omarchy theme if that link is missing |
+
+Each tool follows whichever Omarchy theme is active, so switching to Shoujo Dark or any other theme recolors all of it. Every file the installer replaces is backed up to `~/.local/share/omarchy-shoujo/backups`, and `--uninstall` puts it back.
+
+Want to read it before running it? Clone the repo and run `./install.sh --dry-run`.
+
+### Theme only
+
+Just the Omarchy theme, without touching any other config. Pick one:
 
 **Terminal**
 
@@ -38,6 +65,7 @@ Everything Omarchy themes, driven by one palette in `colors.toml`:
 - Helix, VS Code, Obsidian, tmux and GTK apps (switched to light mode)
 - `Yaru-blue` icons
 - Wallpaper
+- With the full setup: Starship, Fastfetch and eza
 
 Works on Omarchy 4.x and 3.x. `colors.toml` carries both the named palette that 4.x reads and the `color0`–`color15` keys that 3.x templates expect. VS Code and tmux theming need Omarchy 4.x. The empty `light.mode` file tells Omarchy 3.x to switch GTK and the browser to light mode (4.x reads `mode = "light"` from `colors.toml`).
 
